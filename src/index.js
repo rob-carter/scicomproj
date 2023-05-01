@@ -58,7 +58,7 @@ scene.objects = [
     specular: 0.2,
     lambert: 0.7,
     ambient: 0.4,
-    radius: 2.5,
+    radius: 2.1,
   }
 ];
 
@@ -162,7 +162,7 @@ function sphereNormal(sphere, pos) {
 
 function surface(ray, scene, object, pointAtTime, normal, depth) {
   var b = object.color,
-    c = Vector.ZERO,
+    canvas = Vector.ZERO,
     lambertAmount = 0;
 
   if (object.lambert) {
@@ -187,14 +187,14 @@ function surface(ray, scene, object, pointAtTime, normal, depth) {
     };
     var reflectedColor = trace(reflectedRay, scene, ++depth);
     if (reflectedColor) {
-      c = Vector.add(c, Vector.scale(reflectedColor, object.specular));
+      canvas = Vector.add(canvas, Vector.scale(reflectedColor, object.specular));
     }
   }
 
   lambertAmount = Math.min(1, lambertAmount);
 
   return Vector.add3(
-    c,
+    canvas,
     Vector.scale(b, lambertAmount * object.lambert),
     Vector.scale(b, object.ambient)
   );
