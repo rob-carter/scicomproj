@@ -7,15 +7,20 @@
   <link rel="stylesheet" media="all" href="custom.css" />
 </head>
 <body>
-  <h1>lorentz contraction</h1>
+  <nav>
+    <ul>
+      <li><a href="http://127.0.0.1:5500/index.html">Ray Tracing</a></li>
+      <li><a href="http://127.0.0.1:5500/index_alt.html">Length Contract</a></li>
+    </ul>
+  </nav>
   <div id="imgdiv">
     <img id="img" src="./assets/ball.png" alt="Ball" width="800" height="600" />
   </div>
   <label for="slider">speed:</label>
   <input id='slider' type="range" id="slider" name="slider" min="0" max="99" value="0">
   <label id="cdis">0.0c</label>
-  <button onclick="changeImage('./assets/ball.png')">Ball</button>
-  <button onclick="changeImage('./assets/dog.png')">Dog</button>
+  <button id ="button1" onclick="changeImage('./assets/ball.png')">Ball</button>
+  <button id = "button2" onclick="changeImage('./assets/dog.png')">Dog</button>
   <script src='src/index_alt.js'></script>
 </body>
 </html>
