@@ -1,10 +1,10 @@
-# raytracing objects at near light speed
+# visualizing objects at near light speed
 
 ## info 
 
 The goal of this project was to visualize what an object might look like when going at near light speed. 
 
-To reach this goal, I created a site with two different simulations. The first is a ray traced sphere being transformed, and the other is a simpler length contraction simulation on 2d images. Both are interactive with the slider, the furthest right position represents 0.99c.
+To reach this goal, I created a site with two different simulations. The first is a ray traced sphere being transformed (index.html), and the other is a simpler length contraction simulation on 2d images (index_alt.html). Both are interactive with the slider, the furthest right position represents 0.99c.
 
 ## how to use
 1. clone repo
