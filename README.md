@@ -6,6 +6,14 @@ The goal of this project was to visualize what an object might look like when go
 
 To reach this goal, I created a site with two different simulations. The first is a ray traced sphere being transformed (index.html), and the other is a simpler length contraction simulation on 2d images (index_alt.html). Both are interactive with the slider, the furthest right position represents 0.99c.
 
+To calculate length contraction the following formula is used:
+
+<p>
+  <img src="./assets/lc.png" width="150" height="50" title="Length Contraction">
+</p>
+
+Where L' is the obvserved length of the object. $L_0$ is the measured length when stationary. v is a fraction of the speed of light that the object is moving at. c is the speed of light constant.
+
 ## how to use
 1. clone repo
 2. (optional) serve on port 5500
