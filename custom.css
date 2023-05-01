@@ -20,10 +20,12 @@ label {
   width: 50%;
   left: 45%;
   transform: translateX(-50%);
+  margin: 20px;
 }
 
 #slider {
   position: absolute;
+  margin: 20px;
   bottom: 0;
   width: 45%;
   left: 50%;
@@ -65,6 +67,7 @@ h1 {
   border-radius: 20px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
 }
+
 #button2 {
   position: fixed;
   bottom: 0;
@@ -81,10 +84,27 @@ h1 {
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
+#button3 {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin-right: 184px;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
 nav {
   background-color: #333;
   height: 50px;
   border-radius: 20px;
+  margin: 12px;
 }
 
 ul {
@@ -111,4 +131,19 @@ li a {
 
 li a:hover {
   background-color: #111;
+}
+
+#calcs {
+  position: fixed;
+  bottom: 1;
+  right: 0;
+  margin: 20px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
 }
