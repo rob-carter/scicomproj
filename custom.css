@@ -1,0 +1,45 @@
+body {
+  background-color: whitesmoke;
+  font-family: Arial, Helvetica, sans-serif;
+ }
+
+canvas {
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    width: 60%;
+    height: 40%;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid rgb(151, 151, 151);
+    border-radius: 20px;
+}
+
+label {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  left: 45%;
+  transform: translateX(-50%);
+}
+
+#slider {
+  position: absolute;
+  bottom: 0;
+  width: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#cdis {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  left: 100%;
+  transform: translateX(-50%);
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
