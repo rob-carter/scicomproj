@@ -1,8 +1,18 @@
+let count = 0;
+
+setInterval(function() {
+  count++;
+  clear()
+  draw()
+  if (count == 530) {
+    count = -535  
+  }
+}, 1);
+
 var canvas = document.getElementById("canvas")
 canvas.width = 800;
 canvas.height = 600;
 var ctx = canvas.getContext("2d");
-
 
 const slider = document.getElementById('slider')
 
@@ -15,6 +25,7 @@ slider.addEventListener('input', (event) => {
   beta = [vc, 0, 0]
   clear()
   draw()
+
 }) 
 
 function radians(degrees) {
@@ -232,7 +243,7 @@ function draw() {
         ctx.fillStyle = "blue";
       }
       // console.log((X[i][j]*250 + 400), (Y[i][j]*250 + 300))
-      ctx.fillRect((X[i][j]*250 + 400), (Y[i][j]*250 + 300), 9, 9);
+      ctx.fillRect((X[i][j]*250 + 400 + count ), (Y[i][j]*250 + 300), 9, 9);
     }
   }
 }
@@ -241,7 +252,7 @@ const aOff =  [0, 0, 0]
 const xObs = [0.5, 2, 0]
 const center = [0, 0, 0]
 const tObs = Math.sqrt(xObs[0]**2 + xObs[1]**2 + xObs[2]**2)
-let beta = [vc, 0.0, 0.0] //TODO: chagne 0.3 to vc
+let beta = [0.0, 0.0, 0.0]
 const fovY = 32.0
 const upV = [0, 0, 1]
 const projMatrix = getPerspMatrix(fovY, 1.0, 0.1, 100.0)
@@ -259,4 +270,3 @@ let Y = [];
 let C = [];
 
 draw()
-
