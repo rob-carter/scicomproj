@@ -1,13 +1,13 @@
 let count = 0;
 
-setInterval(function() {
-  count++;
-  clear()
-  draw()
-  if (count == 530) {
-    count = -535  
-  }
-}, 1);
+// setInterval(function() {
+//   count++;
+//   clear()
+//   draw()
+//   if (count == 530) {
+//     count = -535  
+//   }
+// }, 1);
 
 var canvas = document.getElementById("canvas")
 canvas.width = 800;
