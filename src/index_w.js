@@ -12,6 +12,9 @@ var vc = 0
 slider.addEventListener('input', (event) => {
   vc = event.target.value / 100
   cdisLabel.textContent = `${vc}c`
+  beta = [vc, 0, 0]
+  clear()
+  draw()
 }) 
 
 function radians(degrees) {
@@ -208,11 +211,37 @@ function plotBox(a, vel, t) {
   }
 }
 
+function clear() {
+  X = []
+  Y = []
+  C = []
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+}
+
+function draw() {
+  console.log(beta)
+  plotBox(aOff, beta, tObs)
+
+  ctx.fillStyle = "blue";
+  
+  for (let i = 0; i < X.length; i++) {
+    for (let j = 0; j < X[i].length; j++) {
+      if(C[i] == 'r') {
+        ctx.fillStyle = "red";
+      } else {
+        ctx.fillStyle = "blue";
+      }
+      // console.log((X[i][j]*250 + 400), (Y[i][j]*250 + 300))
+      ctx.fillRect((X[i][j]*250 + 400), (Y[i][j]*250 + 300), 9, 9);
+    }
+  }
+}
+
 const aOff =  [0, 0, 0]
 const xObs = [0.5, 2, 0]
 const center = [0, 0, 0]
 const tObs = Math.sqrt(xObs[0]**2 + xObs[1]**2 + xObs[2]**2)
-const beta = [0.2, 0.0, 0.0] //TODO: chagne 0.3 to vc
+let beta = [vc, 0.0, 0.0] //TODO: chagne 0.3 to vc
 const fovY = 32.0
 const upV = [0, 0, 1]
 const projMatrix = getPerspMatrix(fovY, 1.0, 0.1, 100.0)
@@ -229,17 +258,5 @@ let X = [];
 let Y = [];
 let C = [];
 
-plotBox(aOff, beta, tObs)
+draw()
 
-ctx.fillStyle = "blue";
-
-for (let i = 0; i < X.length; i++) {
-  for (let j = 0; j < X[i].length; j++) {
-    if(C[i] == 'r') {
-      ctx.fillStyle = "red";
-    } else {
-      ctx.fillStyle = "blue";
-    }
-    ctx.fillRect((X[i][j]*250 + 400), (Y[i][j]*250 + 300), 9, 9);
-  }
-}
