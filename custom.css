@@ -6,12 +6,13 @@ body {
 canvas {
     image-rendering: crisp-edges;
     image-rendering: pixelated;
-    width: 98%;
+    width: 60%;
     height: 100%;
     display: block;
     margin: 0 auto;
     border: 2px solid rgb(151, 151, 151);
     border-radius: 20px;
+    background-color: azure;
 }
 
 label {
